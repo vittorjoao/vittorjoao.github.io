@@ -1,8 +1,8 @@
-<h1 align="center">DevLinks</h1>
+<h1 align="center">Devlinks</h1>
 
-<p align="center">
-  Programa DevLinks, promovido pela Rocketseat via Discover.
-</p>
+## Sobre
+
+Desenvolvido via Discover da Rocketseat e adaptado para minhas necessidades.
 
 ## Tecnologias
 

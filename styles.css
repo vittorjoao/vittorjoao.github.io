@@ -6,11 +6,11 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-color: rgb(53, 79, 82);
   --bg-switch: url(./assets/switch-dark.svg);
-  --bg-button: rgba(255, 255, 255, 0.1);
-  --bg-button-hover: rgba(255, 255, 255, 0.05);
-  --border-color-hover: 1.5px solid #ffffff;
+  --bg-button: rgba(82, 121, 111, 0.15);
+  --bg-button-hover: rgba(82, 121, 111, 0.5);
+  --border-color-hover: 1.5px solid rgb(202, 210, 197);
   --surface-color: rgba(255, 255, 255, 0.1);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --highlight-color: rgba(255, 255, 255, 0.2);
@@ -18,18 +18,18 @@
 
 .light {
   --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-color: rgb(202, 210, 197);
   --bg-switch: url(./assets/switch-light.svg);
-  --bg-button: rgba(0, 0, 0, 0.05);
-  --bg-button-hover: rgba(0, 0, 0, 0.02);
-  --border-color-hover: 1.5px solid #000000;
+  --bg-button: rgba(132, 169, 140, 0.15);
+  --bg-button-hover: rgba(132, 169, 140, 0.5);
+  --border-color-hover: 1.5px solid rgb(53, 79, 82);
   --surface-color: rgba(0, 0, 0, 0.05);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background-color: var(--bg-color);
   height: 100vh;
 }
 
@@ -42,7 +42,7 @@ body * {
   width: 100%;
   max-width: 588px;
   margin: 0px auto 0 auto;
-  padding: 56px 24px;
+  padding: 24px 24px;
 }
 
 /* profile */
@@ -78,7 +78,7 @@ body * {
 #theme-switch button {
   width: 32px;
   height: 32px;
-  background: white var(--bg-switch) no-repeat center;
+  background: rgb(107, 145, 126) var(--bg-switch) no-repeat center;
   border: none;
   border-radius: 50%;
   position: absolute;
@@ -87,7 +87,6 @@ body * {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-
   animation: slide-out 0.2s;
 }
 
@@ -150,15 +149,21 @@ ul li a {
   line-height: 24px;
 }
 
-/* media queries */
-@media (min-width: 768px) {
-  :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
-  }
+#icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
 
-  .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-  }
+#icon img {
+  filter: invert(89%) sepia(65%) saturate(11%) hue-rotate(162deg)
+    brightness(105%) contrast(104%);
+}
+
+.light #icon img {
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(96deg) brightness(93%)
+    contrast(106%);
 }
 
 /* animations */
