@@ -30,6 +30,7 @@
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -38,9 +39,10 @@ body * {
 }
 
 #container {
-  width: 360px;
-  margin: 56px auto 0 auto;
-  padding: 0 24px;
+  width: 100%;
+  max-width: 588px;
+  margin: 0px auto 0 auto;
+  padding: 56px 24px;
 }
 
 /* profile */
@@ -84,11 +86,17 @@ body * {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+
+  animation: slide-out 0.2s;
 }
 
 .light #theme-switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
+}
+
+#theme-switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #theme-switch span {
@@ -140,4 +148,37 @@ ul li a {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animations */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
 }
