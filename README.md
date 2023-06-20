@@ -1,5 +1,3 @@
-<h1 align="center">Devlinks</h1>
-
 ## Sobre
 
 Desenvolvido via Discover da Rocketseat e adaptado para minhas necessidades.
